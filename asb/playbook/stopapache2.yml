@@ -1,0 +1,12 @@
+---
+- hosts: "stopapache2"
+  gather_facts: false
+  tasks:
+    - name: "stop apache2"
+      shell: sh /home/wfq/asb/stopapache2.sh
+      register: stop_result
+    - name: "check stdout"
+      shell: echo cc `date + '%Y%m%d %H:%M:%S'` {{ stop_result.stdout }}, for check >> /home/wfq/asb/asb.log
+    - name: "inform users"
+      shell: echo cc `date + '%Y%m%d %H:%M:%S'` {{ stop_result.stdout }} stopapache2 succes, inform users by mail >> /home/wfq/asb/asb.log
+      when: "'stop apache2 success' in stop_result.stdout"

@@ -1,0 +1,11 @@
+[13/Apr/2018 11:37:34]"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1915
+[13/Apr/2018 11:37:34]"GET /static/admin/css/base.css HTTP/1.1" 304 0
+[13/Apr/2018 11:37:34]"GET /static/admin/css/login.css HTTP/1.1" 304 0
+[13/Apr/2018 11:37:34]"GET /static/admin/img/nav-bg.gif HTTP/1.1" 304 0
+[13/Apr/2018 11:37:39]"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1915
+[13/Apr/2018 11:37:42]"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[13/Apr/2018 11:37:42]"GET /admin/ HTTP/1.1" 200 3018
+[13/Apr/2018 11:37:42]"GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[13/Apr/2018 11:37:42]"GET /static/admin/img/default-bg.gif HTTP/1.1" 200 836
+[13/Apr/2018 11:37:42]"GET /static/admin/img/icon_addlink.gif HTTP/1.1" 200 119
+[13/Apr/2018 11:37:42]"GET /static/admin/img/icon_changelink.gif HTTP/1.1" 200 119

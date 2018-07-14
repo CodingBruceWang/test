@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+<meta charset="utf-8">
+    <script src={% static "dropzone/dropzone.js" %}></script>
+{#    <script src={% static "dropzone/dropzone-amd-module.min.js" %}></script>#}
+    <link href={% static "dropzone/dropzone.css" %} rel="stylesheet">
+    <link href={% static "dropzone/basic.css" %} rel="stylesheet">
+{#    <script src={% static "js/jquery-3.2.1.min.js" %}></script>#}
+</head>
+<body>
+    <p>test页面加载这几个js，js通过nginx服务器加载</p>
+    <p>动态处理的请求通过python处理</p>
+    <p>仅仅做动静分离测试</p>
+
+{#    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>#}
+    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+        <input id="uploadfile" name="file" type="file" multiple />
+    </form>
+
+{#    <form action="/file-upload" class="dropzone">#}
+{#        <div class="fallback">#}
+{#            <input name="file" type="file" multiple />#}
+{#        </div>#}
+{#    </form>#}
+
+{#    <form action="/file-upload" class="dropzone">#}
+{#        <div class="fallback">#}
+{#            <input name="file" type="file" multiple />#}
+{#  </div>#}
+{#</form>#}
+
+{#    <div id="myId" class="dropzone" style="min-height:200px;"></div>#}
+
+{#    <div id="dropz"  class="dropzone"></div>#}
+
+</div>
+</body>
+<script type="text/javascript">
+
+
+
+
+    {#$("#myId").dropzone({#}
+    {#    url: 'home/upload',#}
+    {#{);#}
+
+    {#$(document).ready(function () {#}
+    {#    var dropz = new Dropzone("#my-awesome-dropzone", {#}
+    {#        url: "handle-upload.php",#}
+    {#        maxFiles: 10,#}
+    {#        maxFilesize: 512,#}
+    {#        acceptedFiles: ".js,.obj,.dae"#}
+    {#    });#}
+    {#{);#}
+</script>
+{#<script>#}
+    {#$(document).ready(function () {#}
+
+
+
+        {#Dropzone.options.myAwesomeDropzone = {#}
+        {#    autoProcessQueue:false,#}
+        {#    uploadMultiple:true,#}
+        {#    parallelUploads:100,#}
+        {#    maxFilesize:1000,#}
+        {#    maxFiles:100,#}
+        {#    url:"/test",#}
+        {#    init: function () {#}
+        {#        var myDropzone = this;#}
+        {#        console.log('test')#}
+        {#    },#}
+        {#    this.on("addfile", function () {#}
+        {#        console.log("test")#}
+        {#    }),#}
+        {#{;#}
+        {#var myDropzone = new Dropzone("my-awesome-dropzone", {#}
+        {#    url: "/file/post"#}
+        {#{);#}
+        {#$("#my-awesome-dropzone").dropzone({#}
+        {#    url: "handle-upload.php",#}
+        {#    addRemoveLinks: true,#}
+        {#    dictRemoveLinks: "x",#}
+        {#    dictCancelUpload: "x",#}
+        {#    maxFiles: 10,#}
+        {#    maxFilesize: 5,#}
+        {#    acceptedFiles: ".js",#}
+        {#    init: function() {#}
+        {#        this.on("success", function(file) {#}
+        {#            console.log("File " + file.name + "uploaded");#}
+        {#        });#}
+        {#        this.on("removedfile", function(file) {#}
+        {#            console.log("File " + file.name + "removed");#}
+        {#        });#}
+        {#    }#}
+        {#{);#}
+    {#{);#}
+{#</script>#}
+</html>

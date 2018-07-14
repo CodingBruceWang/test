@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJs Test</title>
+    <script src={% static "js/angular.min.js" %}></script>
+    <script src={% static "js/angular-route.min.js" %}></script>
+{#    <script src="../../js/angular.min.js"></script>#}
+    <script src={% static "js/jquery-3.2.1.min.js" %}></script>
+{#    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>#}
+
+</head>
+<body ng-app="HelloWorld">
+    <div ng-controller="helloWorldController">
+        <h2>我说：{{ greet }}, 你说：{{ response }}</h2>
+        <p>test: {{ test }}</p>
+        <input ng-model="test">
+    </div>
+<script>
+    $(document).ready(function () {
+        {#angular.noModule#}
+        angular.module("HelloWorld", ['ngRoute']).controller("helloWorldController", function ($scope) {
+            {#$scope.hello = {};#}
+            $scope.greet = "cc";
+            $scope.response = "dd";
+            $scope.test = "test";
+        })
+    })
+</script>
+</body>
+</html>

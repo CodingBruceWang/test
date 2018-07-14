@@ -1,0 +1,5 @@
+Fri, 13 Apr 2018 21:31:27 settings.py[settings:<module>][line:113] INFO This is info message
+Fri, 13 Apr 2018 21:31:27 settings.py[settings:<module>][line:114] WARNING This is warning message
+Fri, 13 Apr 2018 13:31:30 settings.py[settings:<module>][line:113] INFO This is info message
+Fri, 13 Apr 2018 13:31:30 settings.py[settings:<module>][line:114] WARNING This is warning message
+Fri, 13 Apr 2018 13:31:51 views.py[views:test_vbs][line:8] INFO ============================== vbs test ==============================

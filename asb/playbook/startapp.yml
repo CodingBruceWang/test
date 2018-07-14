@@ -1,0 +1,6 @@
+---
+- hosts: "mis1c10_app"
+  gather_facts: false
+  tasks:
+    - name: "start_mis1c10_app"
+      script: /home/wfq/ops/asb/script/start_mis1c10_app.sh

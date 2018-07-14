@@ -1,0 +1,12 @@
+---
+- hosts: "mis1c10_cm"
+  gather_facts: false
+  tasks:
+    - name: "stop_mis1c10_cm"
+      shell: sh /home/wfq/asb/stop_mis1c10_cm.sh
+      register: stop_result
+    - name: "check stdout"
+      shell: echo {{ stop_result.stdout }}, for check >> /home/wfq/asb/asb.log
+    - name: "inform users"
+      shell: echo {{ start_result.stdout }} stop cm success, inform users by mail >> /home/wfq/asb/asb.log
+      when: "'stop mis1c10 cm success' in stop_result.stdout"

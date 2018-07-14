@@ -1,0 +1,12 @@
+---
+- hosts: "mis1c10_cm"
+  gather_facts: false
+  tasks:
+    - name: "start_mis1c10_cm"
+      shell: sh /home/wfq/asb/start_mis1c10_cm.sh
+      register: start_result
+    - name: "check stdout"
+      shell: echo  `date +'%Y%m%d %H:%M:%S'` {{ start_result.stdout }}, for check >> /home/wfq/asb/asb.log
+    - name: "inform users"
+      shell: echo  {{ start_result.stdout }} start cm success, inform users by mail >> /home/wfq/asb/asb.log
+      when: "'start mis1c10 cm success' in start_result.stdout"

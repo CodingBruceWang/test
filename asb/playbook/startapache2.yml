@@ -1,0 +1,6 @@
+---
+- hosts: "startapache2"
+  gather_facts: false
+  tasks:
+    - name: "start apache2"
+      script: /home/wfq/asb/startapache2.sh
